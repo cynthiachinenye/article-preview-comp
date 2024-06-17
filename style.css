@@ -1,0 +1,154 @@
+@import url("https://fonts.google.com/specimen/Manrope");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e3f4f9 !important;
+}
+.card {
+  width: 600px;
+}
+.text-secondary {
+  font-size: 12px;
+}
+.rounded-circle {
+  width: 35px;
+  height: 35px;
+}
+.profile {
+  font-size: 13px;
+}
+.px-2 {
+  font-weight: 500;
+}
+span {
+  font-weight: 200;
+}
+.share-btn {
+  width: 30px;
+  height: 30px;
+  background-color: var(--bs-gray-300);
+  padding: 10px auto;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.share-btn:hover {
+  background-color: hsl(217, 19%, 35%) !important;
+}
+.social-link {
+  display: flex;
+  position: absolute;
+  background-color: hsl(217, 19%, 35%) !important;
+  height: 50px;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 15px;
+  top: 0;
+  left: 50%;
+  /* bottom:50%; */
+  border-radius: 15px;
+  transform: translate(-50%, calc(-100% - 25px));
+  animation: show 1s forwards linear;
+  display: none;
+}
+a {
+  padding: 10px;
+}
+.social-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 13px solid hsl(217, 19%, 35%);
+  border-color: hsl(217, 19%, 35%) transparent transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -1px);
+  animation: shows 1s forwards linear;
+}
+@keyframes show {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 50px;
+  }
+}
+@keyframes shows {
+  0% {
+    border-width: 0;
+  }
+  100% {
+    border-width: 13px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+@media screen and (max-width:430px) {
+  .card{
+    width:300px;
+  }
+  .social-link{
+    position:absolute;
+    z-index:5;
+    left:-100px;
+    top:70px;
+    width:280px;
+    background-color:hsl(217, 6%, 46%) !important;
+    border:none;
+    border-radius:5%;
+    display: none;
+
+  }
+  .share-btn{
+    background-color:hsl(220, 18%, 87%) !important;
+    z-index:1;
+    
+
+  }
+  .share-btn:hover{
+    background-color:hsl(220, 18%, 87%) !important;
+    
+    
+
+  }
+
+  
+  .social-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: none;
+    border-color: none;
+  
+    
+  }
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+
+  
+
+}
